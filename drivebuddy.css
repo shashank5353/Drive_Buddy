@@ -1,0 +1,249 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+.background{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: #006877;
+  background-color:#d3f9ff;
+  z-index: -1;
+}
+.main{
+  width: 100vw;
+  min-height: 100vh;
+}
+header{
+  margin-top: 3vh;
+  width: 100%;
+  height: 8vh;
+  background-color: #ffffff66;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+#heading_name{
+  margin-left: 4vh;
+  font-size: 3.5vh;
+  font-weight: 600;
+  color: #fff;
+}
+.heading_name{
+  margin-left: 2vh;
+  width: 25vh;
+  height: 100%;
+  background-image: url('n_logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.nation{
+  font-size: 2.2vh;
+  font-weight: 600;
+  color: #fff;
+  color: #f5bc5e;
+  color: #e75c5c;
+  color: #faa71f;
+  margin-right: 4vh;
+}
+.nation i{
+  font-size: 2.4vh;
+}
+.search_space{
+  margin-top:3vh ;
+  width:100vw;
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff66;
+  background-color: transparent;
+}
+.search_place{
+  width: 90%;
+  height: 100%;
+  background-color: #ffffff00;
+  border-radius: 0vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input{
+  all: unset;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  outline: none;
+}
+.search_text{
+  padding-left: 2vh;
+  width: 80%;
+  height: 100%;
+  border-radius: 5vh;
+  background-color: #fff;
+  font-size: 2vh;
+  box-shadow: 0 0 0.4vh 0 #0000003a;
+}
+.search_icon{
+  margin-left: 1vh;
+  width: 5.5vh;
+  height: 5.5vh;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 3vh;
+  font-weight: 600;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0.4vh 0 #0000003a;
+}
+.menu_bar{
+  margin-top: 2vh;
+  width: 100vw;
+  height: 5.5vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  gap: 0.8vh;
+  overflow-x: auto;
+  flex-wrap: wrap;
+}
+.m_b{
+  color: #505050;
+  color:#7c969a ;
+  font-weight: 500;
+  padding: 0.8vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  border-radius: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vh;
+  border:0.01vh solid #c0c0c0;
+  box-shadow: 0 0 0.4vh 0 #0000003a;
+}
+/*.m_b:hover{
+  color:#faa71f;
+}*/
+.suggetion_space{
+  margin-top: 4vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2vh;
+  padding-bottom: 5vh;
+}
+.sugg{
+  width: 42vh;
+  min-height: 20vh;
+  background-color: white;
+  border-radius: 2vh;
+  box-shadow: 0 0 0.4vh 0 #0000003a;
+  overflow: hidden;
+  padding-bottom: 1vh;
+}
+.d_sugg_head{
+  width: 100%;
+  height: 5vh;
+  background-color: #00000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2.5vh;
+  padding-right: 2.5vh;
+}
+.d_sugg_head_name,.d_sugg_ex{
+  font-size: 1.8vh;
+    color:  #7f8b9c;
+    font-weight: 500;
+}
+.d_profile_info{
+  width: 100%;
+  height: 15vh;
+  background-color: #00000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2vh;
+  padding-right: 1vh;
+  gap: 1vh;
+}
+.d_profile_photo{
+  width: 13vh;
+  height: 13vh;
+  background-color: #00000077;
+  background-image: url('d_p_p/d1.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  /* border: 0.1vh solid #0000005b; */
+  box-shadow: 0 0 0.1vh 0.01vh black;
+}
+.d_profile_dis{
+  width: 26vh;
+  height: 15vh;
+  background-color: #00000000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1vh;
+}
+.d_profile_dis_name{
+  font-size: 2.8vh;
+  color: #000;
+  font-weight: 600;
+  
+}
+.d_profile_dis_salary{
+  font-size: 2vh;
+  color: #7c969a;
+  font-weight: 600;
+}
+.d_profile_dis_rating i{
+  font-size: 2vh;
+  color:#ffc000;
+}
+.f_sugg_space{
+  width: 100%;
+  height: 2vh;
+  background-color: transparent;
+  display: flex;
+  justify-content:flex-end;
+}
+.f_sugg{
+  font-size: 1.8vh;
+  color:#7c969a;
+  padding-right: 2vh;
+  font-weight: 450;
+  display: flex;
+  align-items: center;
+  gap: 0.4vh;
+}
+.f_sugg_x{
+  
+}
+.f_sugg i{
+  font-size: 1.9vh;
+  color:#4ce34c;
+  color:#18e418;
+}
+.f_sugg_x i{
+  font-size: 1.8vh;
+  color:#4ce34c;
+  color:#e4443f;
+}
