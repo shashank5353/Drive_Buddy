@@ -760,4 +760,73 @@ search_text.addEventListener("input",()=>{
     
   s_l_m=e_copy_cs(concat(c_l_l[0],s_l_l[0]),concat(c_l_l[1],s_l_l[1]),concat(c_l_l[3],s_l_l[3]));
    
-   
+      let s_l=s_l_m[0];
+   let s_l_in=s_l_m[1];
+   let s_l_sign=s_l_m[2];
+//   console.log(s_l_m);
+   s_l_sugg_list=e_copy(concat(c_l_l[2],s_l_l[2]));
+   if(s_l_in[0]){
+   console.log("finall",s_l,s_l_in);
+    for(let i=0;i<s_l.length;i++){
+    const searched_list_item=document.createElement("div");  
+    searched_list_item.classList.add("m_searched_list_item");
+    
+    const searched_list_item_icon=document.createElement("div");  
+    searched_list_item_icon.classList.add("m_searched_list_item_icon");
+    searched_list_item_icon.innerHTML=`
+     <i class="fa-solid fa-magnifying-glass"></i>
+    `;
+    searched_list_item.append(searched_list_item_icon);
+    
+    const searched_list_item_name=document.createElement("div");  
+    searched_list_item_name.classList.add("m_searched_list_item_name");
+    searched_list_item_name.innerHTML=`
+   ${s_l[i].slice(0,s_l_in[i])}<span>${s_l[i].slice(s_l_in[i],v_len+s_l_in[i])}</span>${s_l[i].slice(v_len+s_l_in[i],)}`;
+    searched_list_item.append(searched_list_item_name);
+    
+ searched_list_item.addEventListener("click",()=>{
+   if(!s_l_sign[i]){
+   searched_list_item.style.backgroundColor="yellow";
+   searched_list_space.innerHTML="";
+   search_text.value=s_l[i];
+   let list_bar_d=[];
+   let list_bar_d_i=0;
+   for(let ci=0;ci<skilled_at.length;ci++){
+   for(let cj=0;cj<skilled_at[ci].length;cj++){
+     if(cars_list[skilled_at[ci][cj]].toLowerCase()==s_l[i].toLowerCase()){
+     list_bar_d[list_bar_d_i]=ci;
+        list_bar_d_i++;
+       }
+     }
+   }
+   s_l_sugg(list_bar_d);
+   document.querySelector(".s_l_search_text").value=s_l[i];
+   search_list_page.style.display="flex";
+  home_page.style.display="none";
+ //  console.log(list_bar_d);
+   }
+  // ("alert");
+    })
+   // console.log(searched_list_item_name.innerHTML);
+    searched_list_space.append(searched_list_item);
+    }
+    searched_list_space.style.display="flex";
+   }
+  })
+
+
+search_icon.addEventListener("click",()=>{
+  if(search_text.value && s_l_m[1][0]){
+      //console.log(s_l_m[1][0]);
+    //console.log(search_text.value);
+    s_l_sugg(s_l_sugg_list);
+  search_list_page.style.display="flex";
+  home_page.style.display="none";
+  document.querySelector(".s_l_search_text").value=search_text.value;
+  search_text.value="";
+  searched_list_space.innerHTML="";
+  
+  }
+  })
+}
+m_search_bar_f();
