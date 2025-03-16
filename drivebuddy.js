@@ -296,7 +296,7 @@ search_text.addEventListener("input",()=>{
    let s_l_sign=s_l_m[2];
    console.log(s_l_m);
    s_l_sugg_list=e_copy(concat(c_l_l[2],s_l_l[2]));
-   if(s_l_in[0]){
+   if(s_l[0]){
    console.log("finall",s_l,s_l_in);
     for(let i=0;i<s_l.length;i++){
     const searched_list_item=document.createElement("div");  
@@ -342,7 +342,7 @@ search_text.addEventListener("input",()=>{
    }
   })
   search_icon.addEventListener("click",()=>{
-    if(s_l_m[1][0]){
+    if(s_l_m[0][0]){
       //console.log(s_l_m[1][0]);
     s_l_sugg(s_l_sugg_list);
     searched_list_space.innerHTML="";
@@ -765,7 +765,7 @@ search_text.addEventListener("input",()=>{
    let s_l_sign=s_l_m[2];
 //   console.log(s_l_m);
    s_l_sugg_list=e_copy(concat(c_l_l[2],s_l_l[2]));
-   if(s_l_in[0]){
+   if(s_l[0]){
    console.log("finall",s_l,s_l_in);
     for(let i=0;i<s_l.length;i++){
     const searched_list_item=document.createElement("div");  
@@ -816,7 +816,7 @@ search_text.addEventListener("input",()=>{
 
 
 search_icon.addEventListener("click",()=>{
-  if(search_text.value && s_l_m[1][0]){
+  if(search_text.value && s_l_m[0][0]){
       //console.log(s_l_m[1][0]);
     //console.log(search_text.value);
     s_l_sugg(s_l_sugg_list);
