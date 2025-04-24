@@ -1412,14 +1412,31 @@ return tem_r;
   
   const p_p_d_request_button=document.querySelector(".p_p_d_request_button");
   p_p_d_request_button.innerText=`request`;
+  let req=true;
   p_p_d_request_button.addEventListener("click",()=>{
-    p_p_d_request_button.innerText=`requested`;
+    if(req){
+   p_p_d_request_button.innerText=`requested`;
+    req=false;
+    }
+    else{
+    p_p_d_request_button.innerText=`request`;
+    req=true;
+    }
   })
   const p_p_d_like_button=document.querySelector(".p_p_d_like_button i");
   p_p_d_like_button.style.color="#67676788";
+  let like=true;
   p_p_d_like_button.addEventListener("click",()=>{
-    p_p_d_like_button.style.color=" #f3481e";
+    if(like){
+   p_p_d_like_button.style.color=" #f3481e";
+    like=false;
+    }
+    else{
+    p_p_d_like_button.style.color="#67676788";
+    like=true;
+    }
   })
+  
   const p_p_d_available=document.querySelector(".p_p_d_available");
   const a_f=()=>{
     let tem_a="";
